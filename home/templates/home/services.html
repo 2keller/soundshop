@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Services | SoundSecure Auto{% endblock %}
+
+{% block content %}
+<section class="services">
+  <h2>Our Services</h2>
+  <p class="intro-text">We offer premium car sound and security solutions tailored to your needs.</p>
+
+  <div class="service-grid">
+    <div class="service-card">
+      <h3>🔊 Sound System Installation</h3>
+      <p>Custom audio setups with subwoofers, amplifiers, and high-fidelity speakers.</p>
+    </div>
+    <div class="service-card">
+      <h3>🔒 Anti-Hijacking Technology</h3>
+      <p>Advanced immobilizers and panic systems to protect you and your vehicle.</p>
+    </div>
+    <div class="service-card">
+      <h3>🚨 Alarm & Central Locking</h3>
+      <p>Secure your car with remote-controlled alarms and central locking systems.</p>
+    </div>
+    <div class="service-card">
+      <h3>📍 GPS Tracking</h3>
+      <p>Real-time location tracking and remote shutdown capabilities.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <a href="{% url 'quote' %}" class="btn">Request a Quote</a>
+  </div>
+</section>
+{% endblock %}
