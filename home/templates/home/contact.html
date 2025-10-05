@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | SoundSecure Auto{% endblock %}
+
+{% block content %}
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>We’d love to hear from you. Reach out directly or send us a message below.</p>
+
+  <div class="contact-info">
+    <p><strong>Phone:</strong> <a href="tel:+27789100005">078 910 0005</a></p>
+    <p><strong>Email:</strong> <a href="mailto:malvernmamoche@gmail.com">malvernmamoche@gmail.com</a></p>
+  </div>
+
+  <form method="post" class="contact-form">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+{% endblock %}
