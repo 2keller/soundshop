@@ -1,0 +1,194 @@
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background-image: url('../images/hero-car.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* ===== Buttons ===== */
+.cta-buttons a,
+.btn,
+.btn-secondary {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn {
+  background-color: #e60000;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #b30000;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-secondary:hover {
+  background-color: #ddd;
+}
+
+/* ===== Intro & Services ===== */
+.intro,
+.services-preview,
+.cta-banner {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.intro h2,
+.services-preview h2,
+.cta-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #e60000;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.service-list li {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+/* ===== CTA Banner ===== */
+.cta-banner {
+  background-color: #222;
+  color: #fff;
+}
+
+.cta-banner .btn {
+  margin-top: 1rem;
+}
+
+/* ===== Navigation (optional preview) ===== */
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e60000;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 3rem 1rem;
+    background-position: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .cta-buttons a {
+    display: block;
+    margin: 1rem auto;
+    width: 80%;
+  }
+
+  .intro,
+  .services-preview,
+  .cta-banner {
+    padding: 2rem 1rem;
+  }
+
+  .service-list li {
+    font-size: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+}

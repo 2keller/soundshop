@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+
+{% block title %}Home | SoundSecure Auto{% endblock %}
+
+{% block content %}
+<!-- 🔊 Hero Section -->
+<section class="hero">
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <h1>MALUVA VIBES | SOUND AND SECURITY</h1>
+      <p class="tagline">Premium Car Sound & Anti-Hijacking Solutions</p>
+      <div class="cta-buttons">
+        <a href="{% url 'quote' %}" class="btn">Get a Quote</a>
+        <a href="{% url 'services' %}" class="btn-secondary">View Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🧾 Intro Section -->
+<section class="intro">
+  <h2>Why Choose Us?</h2>
+  <p>We deliver cutting-edge car sound systems and advanced security solutions tailored to your vehicle. Whether you want booming bass or bulletproof protection, we’ve got you covered.</p>
+</section>
+
+<!-- 🛠️ Services Teaser -->
+<section class="services-preview">
+  <h2>Our Services</h2>
+  <ul class="service-list">
+    <li>🔊 Sound System Installation</li>
+    <li>🔒 Anti-Hijacking Technology</li>
+    <li>🚨 Alarm & Immobilizer Setup</li>
+    <li>📍 GPS Tracking & Remote Control</li>
+  </ul>
+  <a href="{% url 'services' %}" class="btn">Explore All Services</a>
+</section>
+
+<!-- 📩 Call to Action -->
+<section class="cta-banner">
+  <h2>Ready to Upgrade Your Ride?</h2>
+  <p>Get a personalized quote today and experience the MALUVA VIBES difference.</p>
+  <a href="{% url 'quote' %}" class="btn">Request a Quote</a>
+</section>
+{% endblock %}
