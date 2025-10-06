@@ -1,59 +1,40 @@
-
 {% extends "base.html" %}
+{% load static %}
 
-{% block title %}Home | SoundSecure Auto{% endblock %}
+{% block title %}Home | Maluva Vibes{% endblock %}
 
 {% block content %}
-<header>
-  <div class="navbar">
-    <div class="logo">MALUVA VIBES</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'services' %}">Services</a></li>
-        <li><a href="{% url 'quote' %}">Quote</a></li>
-        <li><a href="{% url 'contact' %}">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- 🔊 Hero Section -->
 <section class="hero">
   <div class="hero-overlay">
     <div class="hero-text">
-      <h1>MALUVA VIBES | SOUND AND SECURITY</h1>
-      <p class="tagline">Premium Car Sound & Anti-Hijacking Solutions</p>
+      <h1>YOUR RIDE. YOUR SOUND. OUR SECURITY.</h1>
+      <p class="tagline">Premium Car Sound & Anti-Hijacking Solutions in Gauteng</p>
       <div class="cta-buttons">
-        <a href="{% url 'quote' %}" class="btn">Get a Quote</a>
-        <a href="{% url 'services' %}" class="btn-secondary">View Services</a>
+        <a href="{% url 'quote' %}" class="btn">Get a Quote Today</a>
+        <a href="{% url 'services' %}" class="btn-secondary">Explore Services</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 🧾 Intro Section -->
 <section class="intro">
-  <h2>Why Choose Us?</h2>
-  <p>We deliver cutting-edge car sound systems and advanced security solutions tailored to your vehicle. Whether you want booming bass or bulletproof protection, we’ve got you covered.</p>
+  <h2>Why Choose Maluva Vibes?</h2>
+  <p>We deliver cutting-edge car sound systems and advanced security solutions tailored to your vehicle. Whether you want **booming bass** or **bulletproof protection**, our expert installation ensures you get the best of both worlds. We are dedicated to quality, precision, and your peace of mind.</p>
 </section>
 
-<!-- 🛠️ Services Teaser -->
 <section class="services-preview">
-  <h2>Our Services</h2>
+  <h2>What We Offer</h2>
   <ul class="service-list">
-    <li>🔊 Sound System Installation</li>
-    <li>🔒 Anti-Hijacking Technology</li>
-    <li>🚨 Alarm & Immobilizer Setup</li>
-    <li>📍 GPS Tracking & Remote Control</li>
+    <li>🔊 Custom Sound System Installation</li>
+    <li>🔒 Advanced Anti-Hijacking & Immobilizers</li>
+    <li>🚨 Professional Alarm & Central Locking</li>
   </ul>
-  <a href="{% url 'services' %}" class="btn">Explore All Services</a>
+  <a href="{% url 'services' %}" class="btn">View All Services</a>
 </section>
 
-<!-- 📩 Call to Action -->
 <section class="cta-banner">
   <h2>Ready to Upgrade Your Ride?</h2>
-  <p>Get a personalized quote today and experience the MALUVA VIBES difference.</p>
+  <p>Don't wait to experience superior sound or enhanced security. Get a personalized, no-obligation quote today.</p>
   <a href="{% url 'quote' %}" class="btn">Request a Quote</a>
 </section>
 {% endblock %}

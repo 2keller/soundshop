@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Quote | Maluva Vibes{% endblock %}
+
+{% block content %}
+<section class="quote">
+  <h2>Request a Quote</h2>
+  <p class="intro-text">Tell us about your vehicle and the services you need. We'll get back to you with a personalized quote.</p>
+
+  <form method="post" class="quote-form">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="vehicle" placeholder="Vehicle Make & Model" required>
+
+    <select name="service" required>
+      <option value="">Select a Service</option>
+      <option value="sound">🔊 Sound System Installation</option>
+      <option value="security">🔒 Anti-Hijacking Technology</option>
+      <option value="alarm">🚨 Alarm & Central Locking</option>
+    </select>
+
+    <textarea name="message" rows="5" placeholder="Additional Details or Requests"></textarea>
+    <button type="submit" class="btn">Submit Quote Request</button>
+  </form>
+</section>
+{% endblock %}

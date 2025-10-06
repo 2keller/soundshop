@@ -1,23 +1,38 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block title %}Contact | SoundSecure Auto{% endblock %}
+{% block title %}Contact | Maluva Vibes{% endblock %}
 
 {% block content %}
 <section class="contact">
-  <h2>Contact Us</h2>
-  <p>We’d love to hear from you. Reach out directly or send us a message below.</p>
+  <h2>Contact Maluva Vibes</h2>
+  
+  <p class="intro-text">
+    For the fastest service, instant quotes, or direct installation inquiries, contact us immediately via WhatsApp!
+  </p>
 
   <div class="contact-info">
-    <p><strong>Phone:</strong> <a href="tel:+27789100005">078 910 0005</a></p>
+    <p>
+        <a href="https://wa.me/27789100005?text=Hello%20Maluva%20Vibes!%20I%20have%20an%20inquiry%20about%20your%20car%20sound%20and%20security%20services." 
+           class="btn-whatsapp" 
+           target="_blank">
+           Chat on WhatsApp (078 910 0005)
+        </a>
+    </p>
+    <p><strong>Phone:</strong> <a href="tel:+27789100005">078 910 0005</a> (Call or WhatsApp)</p>
     <p><strong>Email:</strong> <a href="mailto:malvernmamoche@gmail.com">malvernmamoche@gmail.com</a></p>
+    <p><strong>Location:</strong> Serving the Greater Gauteng Area</p>
   </div>
 
+  <hr style="border-top: 1px solid #495670; margin: 3rem 0; width: 50%; margin: 3rem auto;">
+
+  <h3>Or, Send Us a General Inquiry</h3>
   <form method="post" class="contact-form">
     {% csrf_token %}
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send Message</button>
+    <textarea name="message" rows="5" placeholder="Your Inquiry or Message" required></textarea>
+    <button type="submit" class="btn-secondary">Send Email Inquiry</button>
   </form>
 </section>
 {% endblock %}

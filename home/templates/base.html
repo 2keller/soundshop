@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap"> 
+  
+  <title>{% block title %}Maluva Vibes | Car Sound & Security{% endblock %}</title>
+  
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  
+  <header>
+    <div class="navbar">
+      <a href="{% url 'home' %}" class="logo">MALUVA VIBES</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
+          <li><a href="{% url 'services' %}" class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">Services</a></li>
+          <li><a href="{% url 'quote' %}" class="{% if request.resolver_match.url_name == 'quote' %}active{% endif %}">Quote</a></li>
+          <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="messages-container">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MALUVA VIBES. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,508 @@
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  /* NEW BACKGROUND: Dark theme with a subtle texture/gradient for depth */
+  background-color: #0A192F; 
+  background-image: linear-gradient(rgba(0,0,0,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.4) 1px, transparent 1px);
+  background-size: 25px 25px; /* Subtle grid pattern */
+  color: #ccd6f6; /* Light text on dark background */
+}
+
+/* Global Headings */
+h1, h2, h3 {
+  color: #64FFDA; /* Electric Green accent */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ===== Navigation Bar (Dark and Clean) ===== */
+.navbar {
+  background-color: #0A192F; 
+  color: #ccd6f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #64FFDA; /* Logo is the primary accent color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.logo:hover {
+    color: #ffffff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: #ccd6f6;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.nav-links li a:hover {
+  color: #64FFDA;
+}
+
+.nav-links li a.active {
+  border-bottom: 3px solid #64FFDA;
+  color: #64FFDA;
+}
+
+/* ===== Hero Section (High Impact) ===== */
+.hero {
+  background-image: url('../images/audio setup.jpeg'); /* Using one of your images as a suggestion */
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh; 
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Subtle light overlay to push content back */
+  background-blend-mode: soft-light;
+}
+
+.hero-overlay {
+  background: rgba(10, 25, 47, 0.85); 
+  width: 100%;
+  height: 100%;
+  padding: 4rem 2rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: #ccd6f6;
+  max-width: 1000px;
+  animation: fadeIn 1.5s ease-out; 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #64FFDA; 
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5); /* Subtle neon glow */
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+}
+
+/* ===== Buttons (Clean, High-Contrast) ===== */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cta-buttons a,
+.btn,
+.btn-secondary {
+  display: inline-block;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn {
+  background-color: #64FFDA; /* Primary button is the vibrant green */
+  color: #0A192F; /* Dark text on bright button */
+  border: 2px solid #64FFDA;
+}
+
+.btn:hover {
+  background-color: rgba(100, 255, 218, 0.85); 
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(100, 255, 218, 0.25);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #64FFDA;
+  border: 2px solid #64FFDA;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  color: #ffffff;
+  transform: translateY(-3px);
+  border-color: #ffffff;
+}
+
+/* ===== General Sections ===== */
+.intro,
+.services-preview,
+.contact,
+.quote {
+  padding: 5rem 4rem;
+  text-align: center;
+}
+
+.intro {
+  background-color: #0d2141; /* Slightly lighter dark background for contrast */
+  color: #ccd6f6;
+}
+
+.services-preview {
+  background-color: #0A192F; 
+}
+
+.intro h2,
+.services-preview h2,
+.cta-banner h2,
+.services h2,
+.contact h2,
+.quote h2 {
+  font-size: 2.5rem;
+  color: #64FFDA;
+  margin-bottom: 1.5rem;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto; 
+  max-width: 600px;
+}
+
+.service-list li {
+  font-size: 1.3rem;
+  color: #ccd6f6;
+  margin: 1rem 0;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.2); 
+  padding-bottom: 0.75rem;
+}
+.service-list li:hover {
+    color: #64FFDA;
+}
+
+/* ===== CTA Banner (White on Dark Blue) ===== */
+.cta-banner {
+  background-color: #0d2141; 
+  color: #ccd6f6;
+  padding: 5rem 4rem;
+  text-align: center;
+}
+
+.cta-banner h2 {
+    color: #ffffff; /* Use white for major contrast */
+    font-size: 3rem;
+}
+
+.cta-banner p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #060e1d; /* darkest shade */
+  color: #8892b0;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Services Page (Service Cards) ===== */
+.services {
+  background-color: #0A192F;
+  color: #ccd6f6;
+  padding: 5rem 4rem;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 3rem; 
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 2.5rem; 
+  margin-bottom: 4rem;
+}
+
+.service-card {
+  background-color: #0d2141; /* Card background is slightly lighter than body */
+  padding: 2.5rem;
+  border-radius: 8px; 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4); 
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-bottom 0.4s ease;
+  border-bottom: 4px solid #0d2141; /* Placeholder border */
+  text-align: left;
+}
+
+.service-card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); 
+  border-bottom: 4px solid #64FFDA; /* Green glow border on hover */
+}
+
+.service-card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  color: #ccd6f6; /* White-ish heading */
+  font-size: 1.6rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #8892b0;
+}
+
+/* Service Icons */
+.service-card .icon {
+  font-size: 3rem; 
+  color: #64FFDA;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .icon {
+    transform: scale(1.1); /* Subtle movement on hover */
+}
+
+/* ===== Contact & Quote Pages (Form Improvements) ===== */
+.contact-form,
+.quote-form {
+  margin-top: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #0d2141; 
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contact-form input,
+.contact-form textarea,
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  padding: 1.2rem; 
+  border: 1px solid #495670;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #0A192F; /* Input field is slightly darker */
+  color: #ccd6f6;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+  border-color: #64FFDA; 
+  box-shadow: 0 0 8px rgba(100, 255, 218, 0.4); 
+  outline: none;
+}
+
+.contact-info p {
+    color: #ccd6f6;
+}
+
+.contact-info a {
+  color: #64FFDA; 
+}
+.contact-info a:hover {
+  color: #ffffff;
+}
+
+
+/* ===== Mobile Responsiveness (Refined) ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column; 
+    gap: 1rem;
+  }
+  
+  .cta-buttons a,
+  .btn,
+  .btn-secondary {
+    width: 90%; 
+    margin: 0 auto;
+    padding: 1rem 1rem;
+  }
+
+  .intro,
+  .services-preview,
+  .cta-banner,
+  .contact,
+  .quote,
+  .services {
+    padding: 3rem 1.5rem;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== Message Framework Styling ===== */
+.messages-container {
+    padding: 1rem 0;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.messages {
+    list-style: none;
+    padding: 0;
+}
+
+.messages li {
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Ensure text is dark enough to read on the dark theme background */
+    color: #0A192F; 
+}
+
+.messages li.success {
+    /* Success: Based on the new Electric Green accent */
+    background-color: #64FFDA; 
+    border: 1px solid #3d9970;
+}
+
+.messages li.error {
+    /* Error: Standard highly visible red */
+    background-color: #ff4136;
+    border: 1px solid #cc0000;
+    color: #ffffff;
+}
+
+.messages li.info {
+    /* Info: Standard blue */
+    background-color: #4A90E2; 
+    border: 1px solid #1c5fae;
+    color: #ffffff;
+}
+
+
+
+
+
+/* ===== WhatsApp Button Styling (Added for Contact/Quote Page) ===== */
+.btn-whatsapp {
+    /* Base Button style */
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+
+    /* WhatsApp Green look */
+    background-color: #25D366; /* WhatsApp Green */
+    color: #0A192F; /* Dark text */
+    border: 2px solid #25D366;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E; /* Darker green on hover */
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn-whatsapp:focus {
+    /* Apply a neon green/cyan focus to match theme */
+    box-shadow: 0 0 10px 3px #64FFDA; 
+    outline: none;
+}
+
+/* Make sure the form's submit button uses the secondary style for visual hierarchy */
+.contact-form button.btn-secondary {
+    background-color: transparent;
+    color: #64FFDA;
+    border: 2px solid #64FFDA;
+}
