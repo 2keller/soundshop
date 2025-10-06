@@ -25,7 +25,7 @@ DEBUG = False
 # ALLOWED_HOSTS: CRITICAL SETTING FOR LIVE SITES
 # Keep this empty for now. Once you deploy to Render, you MUST update this:
 # Example: ALLOWED_HOSTS = ['maluva-vibes.onrender.com']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://soundshop.onrender.com"]
 
 
 # Application definition
